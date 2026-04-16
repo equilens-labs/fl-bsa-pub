@@ -52,3 +52,5 @@ sha256sum -c SHA256SUMS.txt
 ## Provenance
 
 Each release’s `manifest.json` records the upstream commit SHAs and CI run identifiers used to generate and publish the artifacts.
+See [`PROVENANCE.md`](PROVENANCE.md) for repository-level notes that explain how
+public artifact tags map back to product repository tags.
