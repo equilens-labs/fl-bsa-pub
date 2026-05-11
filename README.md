@@ -46,6 +46,26 @@ Not every release will necessarily include every asset, but names are intended t
 - `manifest.json`
 - `SHA256SUMS.txt`
 
+## Website-Surfaced Assets
+
+The public website links directly to these RC8 assets:
+
+- `whitepaper.pdf`
+- `customer_report.pdf`
+- `manifest.json`
+- `SHA256SUMS.txt`
+
+The remaining RC8 assets are release-tag-page discoverable only:
+
+- `gender_bias_report.pdf`
+- `WhitePaper_Intake_Bundle_v4.zip`
+- `gold_bundle.zip`
+- `robustness_report.pdf`
+- `robustness_di_boxplot.png`
+- `robustness_plots.zip`
+- `robustness_index.csv`
+- `robustness_summary_merged.public.json`
+
 ## Verifying Integrity
 
 Download `SHA256SUMS.txt` and run:
