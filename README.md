@@ -18,23 +18,28 @@ This repository hosts **public, stable, website-linkable** release artifacts for
 
 ## Stable Link Contract (For Website)
 
-Use GitHub’s “latest release” download URLs:
+For prerelease artifacts, use explicit versioned links:
+
+- `https://github.com/equilens-labs/fl-bsa-pub/releases/download/<tag>/<asset>`
+
+For non-prerelease artifacts only, GitHub’s “latest release” download URLs may be used:
 
 - `https://github.com/equilens-labs/fl-bsa-pub/releases/latest/download/<asset>`
 
-Versioned links use:
-
-- `https://github.com/equilens-labs/fl-bsa-pub/releases/download/<tag>/<asset>`
+Do not use `/releases/latest/download/...` for RC or prerelease website links. GitHub excludes
+prereleases from its latest-release endpoint.
 
 ## Expected Asset Names (Stable)
 
 Not every release will necessarily include every asset, but names are intended to remain stable:
 
 - `customer_report.pdf`
+- `gender_bias_report.pdf`
 - `whitepaper.pdf`
-- `WhitePaper_Reviewer_Pack_v4.zip`
+- `WhitePaper_Intake_Bundle_v4.zip`
 - `gold_bundle.zip`
 - `robustness_report.pdf`
+- `robustness_di_boxplot.png`
 - `robustness_plots.zip`
 - `robustness_index.csv`
 - `robustness_summary_merged.public.json`
