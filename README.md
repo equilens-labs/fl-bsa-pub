@@ -18,6 +18,16 @@ This repository hosts **public, versioned, website-linkable** release artifacts 
 - Artifacts committed into git history (all publishables are **release assets**, not tracked files).
 - Demo appliance images/builds (those are distributed separately, e.g. via cloud marketplaces or direct delivery).
 
+## License Scope
+
+The repository-level [`LICENSE`](LICENSE) applies to the tracked repository
+documentation and metadata.
+
+Release assets are distributed separately through GitHub Releases. For those
+assets, use the release's `manifest.json`, `SHA256SUMS.txt`, and provenance
+notes as the asset-level source of truth for synthetic/demo disposition,
+integrity, and usage context.
+
 ## Stable Link Contract (For Website)
 
 For prerelease artifacts, use explicit versioned links:
