@@ -46,6 +46,7 @@ prereleases from its latest-release endpoint.
 Not every release will necessarily include every asset, but names are intended to remain stable:
 
 - `customer_report.pdf`
+- `evidence_manifest.json`
 - `gender_bias_report.pdf`
 - `whitepaper.pdf`
 - `WhitePaper_Intake_Bundle_v4.zip`
@@ -60,23 +61,38 @@ Not every release will necessarily include every asset, but names are intended t
 
 ## Website-Surfaced Assets
 
-The public website links directly to these `v5.0.0-rc8.4` prerelease assets:
+The public website currently links directly to these
+`v5.0.0-rc9-public-fix-2724455` prerelease assets:
 
 - `whitepaper.pdf`
+- `WhitePaper_Intake_Bundle_v4.zip`
 - `customer_report.pdf`
+- `gold_bundle.zip`
 - `manifest.json`
 - `SHA256SUMS.txt`
 
-The remaining `v5.0.0-rc8.4` prerelease assets are release-tag-page discoverable only:
+The remaining `v5.0.0-rc9-public-fix-2724455` prerelease assets are not linked
+directly from the public website; they remain available on the release tag page:
 
+- `evidence_manifest.json`
 - `gender_bias_report.pdf`
-- `WhitePaper_Intake_Bundle_v4.zip`
-- `gold_bundle.zip`
 - `robustness_report.pdf`
 - `robustness_di_boxplot.png`
 - `robustness_plots.zip`
 - `robustness_index.csv`
 - `robustness_summary_merged.public.json`
+
+## Exact Stable v5 Disposition
+
+The public assets above are an RC9-era corrected, non-commercial technical-proof prerelease. They
+are not a public distribution of the product repository's exact stable `v5.0.0` release.
+
+No exact-stable `v5.0.0` public release is recorded in this repository. Do not infer stable public
+availability, customer-evidence approval, general availability, certification, or Marketplace
+publication from the RC9 assets. No exact-stable public-artifact approval is recorded here.
+Retargeting public links to exact-stable assets requires separately recorded release-owner,
+legal/claims, and publication approval; this record does not constrain an owner-approved removal
+or other change to the current RC9 links.
 
 ## Verifying Integrity
 

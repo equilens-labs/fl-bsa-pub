@@ -5,8 +5,57 @@ commits identify the public release-asset set in this repository, not the source
 product commit in the producer repository.
 
 For each release, treat the release asset `manifest.json` as the artifact-level
-source of truth. It records the upstream product tag, product commit SHA,
-evidence workflow run, publisher run, and per-asset SHA256 digests.
+source of truth. It records the available upstream evidence/product commit
+SHAs, workflow runs, publisher run, and available per-asset SHA256 digests.
+
+## v5.0.0-rc9-public-fix-2724455
+
+- Public artifact release:
+  <https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.0-rc9-public-fix-2724455>
+- Evidence source commit:
+  `272445518e369d99bc350e66d3ab85f4b84121a0`
+- Gold / robustness / WP evidence run:
+  `27058121862` at that evidence source commit
+- Public publisher run:
+  `27090038355` from publisher commit
+  `63a92f8480873d9052b0aaf6496fc1179532ad57`
+- Whitepaper source run:
+  `27058588858` at whitepaper commit
+  `881e8c99bc75db9c4c82d70b3c22b2dceddfab01`
+- Public publisher mode:
+  automated release-asset publish; `manifest.json` records the publisher run
+  and commit SHA
+
+The public repository tag points to metadata commit
+`babde9bb88c75d20f58b4d73ecf5b22f8a69d096`. That SHA identifies this public
+distribution repository and is expected to differ from the evidence source and
+publisher SHAs above.
+
+Whitepaper asset anchors:
+
+- `whitepaper.pdf`:
+  `2cfc8096d73769185bb0724d0c080408d292651a1bcf94d9b3d9d51863c69c20`
+- `WhitePaper_Intake_Bundle_v4.zip`:
+  `406679efcc66bab25d03f64baec5634e9f147992c5b122c42338566e1ba346f6`
+
+Disposition:
+
+- This is an RC9-era corrected, synthetic/demo, non-commercial technical-proof
+  prerelease. It is not customer output, customer evidence, certification,
+  general-availability approval, or proof of a public Marketplace listing.
+- The publisher copies the selected whitepaper PDF byte-for-byte. It publishes
+  the intake ZIP as a sanitized public projection of the cited WP evidence
+  artifact, preserving the member set while canonicalizing JSON and scrubbing
+  internal paths. The public-output hashes above anchor both assets. The release
+  manifest does not list an arXiv source bundle.
+- It is not a public publication of exact stable product `v5.0.0`. No
+  exact-stable public release is recorded in this repository; that remains a
+  separate release-owner, legal/claims, and publication decision.
+- The release manifest records `vendor_authorship_claimed=false`; bundled keys
+  support bundle-consistency checks and are not a vendor-authorship trust anchor.
+
+Use the release's `manifest.json` and `SHA256SUMS.txt` for the complete asset
+inventory, hashes, evidence-disposition fields, and trust-root boundaries.
 
 ## v5.0.0-rc8.4
 
