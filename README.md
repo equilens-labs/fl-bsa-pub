@@ -59,6 +59,43 @@ Not every release will necessarily include every asset, but names are intended t
 - `manifest.json`
 - `SHA256SUMS.txt`
 
+## v5.0.8 Approved Candidate (Not Yet Published)
+
+The release owner has approved a bounded `v5.0.8` synthetic/demo prerelease
+containing exactly these four assets:
+
+- `customer_report.pdf`
+- `gold_bundle.zip`
+- `manifest.json`
+- `SHA256SUMS.txt`
+
+The reviewed dry run is producer workflow run
+[`36412393041`](https://github.com/equilens-labs/fl-bsa/actions/runs/36412393041),
+attempt `1`, at producer commit
+`24894f7eeaf0cfa289881926fc03cc0cf2c1817c`. Its Actions artifact is
+`public-artifacts-v5.0.8` (artifact ID
+`10965600831`, digest
+`sha256:8128d6920946cde8a09fcec4ea7f2fd15d4499dc3bf6450bae2b463fd621da63`).
+That temporary Actions artifact expires at `2026-10-12T11:01:02Z`; promotion
+at or after that instant requires a new reviewed dry run.
+
+This record does not publish the candidate. No `v5.0.8` release or public asset
+URL exists in this repository yet. A separate controlled publish must promote
+the exact reviewed Actions artifact without rebuilding it, as a prerelease with
+GitHub `latest` behavior disabled. The v5.0.8 whitepaper, intake bundle,
+robustness package, and all other assets remain held.
+
+Promotion also requires the producer default branch to remain at the reviewed
+publisher commit above. If it moves first, the workflow requires a new reviewed
+dry run. This section must be updated promptly after publication so its status
+does not remain stale.
+
+The public website therefore continues to use the approved RC9 assets below
+until the v5.0.8 release exists, its bytes and hashes have been verified, and
+the approved `customer_report.pdf` and `gold_bundle.zip` links are retargeted.
+The RC9 whitepaper, intake, manifest, checksum, and release-page links remain
+unchanged under this decision.
+
 ## Website-Surfaced Assets
 
 The public website currently links directly to these
@@ -89,10 +126,10 @@ are not a public distribution of the product repository's exact stable `v5.0.0` 
 
 No exact-stable `v5.0.0` public release is recorded in this repository. Do not infer stable public
 availability, customer-evidence approval, general availability, certification, or Marketplace
-publication from the RC9 assets. No exact-stable public-artifact approval is recorded here.
-Retargeting public links to exact-stable assets requires separately recorded release-owner,
-legal/claims, and publication approval; this record does not constrain an owner-approved removal
-or other change to the current RC9 links.
+publication from the RC9 assets. No exact-stable `v5.0.0` public-artifact approval is recorded in
+the RC9 record. Retargeting public links to other exact-stable assets requires separately recorded
+release-owner, legal/claims, and publication approval; this record does not constrain an
+owner-approved removal or other change to the current RC9 links.
 
 ## Verifying Integrity
 
