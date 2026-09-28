@@ -8,6 +8,89 @@ For each release, treat the release asset `manifest.json` as the artifact-level
 source of truth. It records the available upstream evidence/product commit
 SHAs, workflow runs, publisher run, and available per-asset SHA256 digests.
 
+## v5.0.8 (Approved Candidate; Not Yet Published)
+
+No public `v5.0.8` tag, release, or release asset exists in this repository at
+the time of this record. The release owner approved a bounded synthetic/demo
+candidate in
+[`fl-bsa#1802`](https://github.com/equilens-labs/fl-bsa/issues/1802), and the
+publisher produced and verified its exact bytes in dry-run workflow
+[`36412393041`](https://github.com/equilens-labs/fl-bsa/actions/runs/36412393041),
+attempt `1`.
+
+Source binding:
+
+- Product release tag: `v5.0.8`
+- Product commit: `97356e5f65e0032e8363190c47104c96294f8f2a`
+- Annotated product tag object:
+  `81a60b5df9057f8e3f9d7648f2f8e620510d314f`
+- Release Evidence run: `36152873675`, attempt `2`
+- Signed inventory artifact ID: `10875824448`
+- Signed inventory artifact digest:
+  `sha256:3f9ddf080265ab45579d3d124062051c39fe16c6c84070854754bc0eef45041a`
+- Signed Gold source: `gold-full-artifacts`, retained from evidence attempt `1`
+- Signed Gold artifact ID: `10873153006`
+- Signed Gold artifact digest:
+  `sha256:18cb11dc190d56441a3e34af8467e8acb1a674400f413def59486bc797d29b85`
+- Publisher commit:
+  `24894f7eeaf0cfa289881926fc03cc0cf2c1817c`
+
+Reviewed candidate:
+
+- Actions artifact name: `public-artifacts-v5.0.8`
+- Actions artifact ID: `10965600831`
+- Actions artifact digest:
+  `sha256:8128d6920946cde8a09fcec4ea7f2fd15d4499dc3bf6450bae2b463fd621da63`
+- Actions artifact expiry: `2026-10-12T11:01:02Z`
+- Scanner inventory SHA-256:
+  `4f687a0205cbb9a83cfd3f3c7d707b9f03f6b9d537a088fb770190cd1c26fb8a`
+- Scanner rewrites: `0`
+- Suppressed OCR warnings: `0`
+
+The candidate contains exactly four top-level files:
+
+| Asset | Size (bytes) | SHA-256 |
+|---|---:|---|
+| `customer_report.pdf` | 237593 | `2b2c39fc846097d6935b39f547eb80d0b022e32f23a52a3e129b8f6c27fcadf3` |
+| `gold_bundle.zip` | 2931913 | `4ae706e1e4e16c9547dd0ee5cee8022383d1db861e7715ac4878515643a443c4` |
+| `manifest.json` | 5767 | `b70da322ec022ecc998b3df5112ca3433468fa26863510cc01f3f79b2142ca81` |
+| `SHA256SUMS.txt` | 168 | `dc1593e9cfdffe46889c2a6c2d35831d01021dcf78f15b8204311551bd14f57b` |
+
+The `SHA256SUMS.txt` file covers the two payloads. The Actions artifact digest
+binds the complete four-file candidate. Any publication must promote the exact
+tuple below without rebuilding it:
+
+- Run ID: `36412393041`
+- Run attempt: `1`
+- Artifact ID: `10965600831`
+- Artifact digest:
+  `sha256:8128d6920946cde8a09fcec4ea7f2fd15d4499dc3bf6450bae2b463fd621da63`
+
+Promotion also requires the producer default branch to remain at publisher
+commit `24894f7eeaf0cfa289881926fc03cc0cf2c1817c`. If it moves first, or if
+promotion starts at or after `2026-10-12T11:01:02Z`, a new dry run and review
+are required.
+
+Intended public disposition:
+
+- Exact public tag `v5.0.8`, GitHub prerelease `true`, GitHub latest `false`
+- Artifact profile `report_gold_demo_v1`; classification `synthetic_demo_only`
+- Customer evidence posture `characterization_only`; no claim expansion
+- Payloads limited to `customer_report.pdf` and `gold_bundle.zip`, with the
+  manifest and checksum sidecars
+- `whitepaper.pdf`, `WhitePaper_Intake_Bundle_v4.zip`, robustness materials,
+  and every other asset remain held
+- No certification or compliance approval, customer or live-data result,
+  general-availability or Marketplace claim, production outcome, or regulatory
+  or legal determination is authorized by this candidate
+
+The report carries the `DEMO / EVALUATION ONLY` watermark. The candidate
+manifest records `vendor_authorship_claimed=false`; the Gold bundle's keys
+support bundle-consistency checks and are not a vendor-authorship trust anchor.
+This prepublication record does not make the candidate public and does not
+change the website's current RC9 links. Update this section promptly after
+publication so its status does not remain stale.
+
 ## v5.0.0-rc9-public-fix-2724455
 
 - Public artifact release:
