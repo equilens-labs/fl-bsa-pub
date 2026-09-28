@@ -8,13 +8,27 @@ For each release, treat the release asset `manifest.json` as the artifact-level
 source of truth. It records the available upstream evidence/product commit
 SHAs, workflow runs, publisher run, and available per-asset SHA256 digests.
 
-## v5.0.8 (Approved Candidate; Not Yet Published)
+## v5.0.8
 
-No public `v5.0.8` tag, release, or release asset exists in this repository at
-the time of this record. The release owner approved a bounded synthetic/demo
-candidate in
-[`fl-bsa#1802`](https://github.com/equilens-labs/fl-bsa/issues/1802), and the
-publisher produced and verified its exact bytes in dry-run workflow
+Public release:
+
+- Release:
+  <https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8>
+- Release ID: `398600408`
+- Published: `2026-09-28T20:29:50Z`
+- Public repository tag target:
+  `9a5518d9b467202d1d8fad56c6f65aa8358046d6`
+- GitHub prerelease: `true`
+- GitHub latest: `false`
+- Immutable release: `true`
+- Publication workflow:
+  [`36478585711`](https://github.com/equilens-labs/fl-bsa/actions/runs/36478585711),
+  attempt `1`
+- Publisher App: `equilens-fl-bsa-public-release`
+
+The release owner approved the bounded synthetic/demo release in
+[`fl-bsa#1802`](https://github.com/equilens-labs/fl-bsa/issues/1802). The
+publisher produced and verified its exact source bytes in dry-run workflow
 [`36412393041`](https://github.com/equilens-labs/fl-bsa/actions/runs/36412393041),
 attempt `1`.
 
@@ -35,7 +49,7 @@ Source binding:
 - Publisher commit:
   `24894f7eeaf0cfa289881926fc03cc0cf2c1817c`
 
-Reviewed candidate:
+Reviewed source artifact:
 
 - Actions artifact name: `public-artifacts-v5.0.8`
 - Actions artifact ID: `10965600831`
@@ -47,7 +61,7 @@ Reviewed candidate:
 - Scanner rewrites: `0`
 - Suppressed OCR warnings: `0`
 
-The candidate contains exactly four top-level files:
+The immutable public release contains exactly four assets:
 
 | Asset | Size (bytes) | SHA-256 |
 |---|---:|---|
@@ -57,8 +71,8 @@ The candidate contains exactly four top-level files:
 | `SHA256SUMS.txt` | 168 | `dc1593e9cfdffe46889c2a6c2d35831d01021dcf78f15b8204311551bd14f57b` |
 
 The `SHA256SUMS.txt` file covers the two payloads. The Actions artifact digest
-binds the complete four-file candidate. Any publication must promote the exact
-tuple below without rebuilding it:
+binds the complete four-file source. Publication workflow run `36478585711`
+promoted this exact tuple without rebuilding it:
 
 - Run ID: `36412393041`
 - Run attempt: `1`
@@ -66,12 +80,13 @@ tuple below without rebuilding it:
 - Artifact digest:
   `sha256:8128d6920946cde8a09fcec4ea7f2fd15d4499dc3bf6450bae2b463fd621da63`
 
-Promotion also requires the producer default branch to remain at publisher
-commit `24894f7eeaf0cfa289881926fc03cc0cf2c1817c`. If it moves first, or if
-promotion starts at or after `2026-10-12T11:01:02Z`, a new dry run and review
-are required.
+After publication, all four unauthenticated exact-tag URLs returned HTTP 200.
+Fresh downloads matched this table, the GitHub release-asset digests, and the
+reviewed source artifact byte-for-byte. The temporary Actions source expires at
+`2026-10-12T11:01:02Z`; that expiry does not affect the immutable public
+release.
 
-Intended public disposition:
+Public disposition:
 
 - Exact public tag `v5.0.8`, GitHub prerelease `true`, GitHub latest `false`
 - Artifact profile `report_gold_demo_v1`; classification `synthetic_demo_only`
@@ -82,14 +97,15 @@ Intended public disposition:
   and every other asset remain held
 - No certification or compliance approval, customer or live-data result,
   general-availability or Marketplace claim, production outcome, or regulatory
-  or legal determination is authorized by this candidate
+  or legal determination is authorized by this release
 
-The report carries the `DEMO / EVALUATION ONLY` watermark. The candidate
+The report carries the `DEMO / EVALUATION ONLY` watermark. The release
 manifest records `vendor_authorship_claimed=false`; the Gold bundle's keys
 support bundle-consistency checks and are not a vendor-authorship trust anchor.
-This prepublication record does not make the candidate public and does not
-change the website's current RC9 links. Update this section promptly after
-publication so its status does not remain stale.
+Publication does not change the website automatically. Under the recorded
+decision, the website owner may retarget only direct `customer_report.pdf` and
+`gold_bundle.zip` links; the current RC9 whitepaper, intake, integrity, and
+release-page links remain unchanged.
 
 ## v5.0.0-rc9-public-fix-2724455
 

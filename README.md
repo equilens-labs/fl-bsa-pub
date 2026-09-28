@@ -59,40 +59,37 @@ Not every release will necessarily include every asset, but names are intended t
 - `manifest.json`
 - `SHA256SUMS.txt`
 
-## v5.0.8 Approved Candidate (Not Yet Published)
+## v5.0.8 Published Demo Prerelease
 
-The release owner has approved a bounded `v5.0.8` synthetic/demo prerelease
-containing exactly these four assets:
+The release owner approved publication of a bounded `v5.0.8` synthetic/demo
+prerelease containing exactly these four assets:
 
-- `customer_report.pdf`
-- `gold_bundle.zip`
-- `manifest.json`
-- `SHA256SUMS.txt`
+- [`customer_report.pdf`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/customer_report.pdf)
+- [`gold_bundle.zip`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/gold_bundle.zip)
+- [`manifest.json`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/manifest.json)
+- [`SHA256SUMS.txt`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/SHA256SUMS.txt)
 
-The reviewed dry run is producer workflow run
+The [public release](https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8)
+was published by the dedicated public-release App on 2026-09-28 as an immutable
+prerelease with GitHub `latest` behavior disabled. Its exact public URLs
+returned HTTP 200 after publication, and all four downloaded files matched the
+reviewed source artifact byte-for-byte.
+
+The reviewed source was producer workflow run
 [`36412393041`](https://github.com/equilens-labs/fl-bsa/actions/runs/36412393041),
 attempt `1`, at producer commit
 `24894f7eeaf0cfa289881926fc03cc0cf2c1817c`. Its Actions artifact is
 `public-artifacts-v5.0.8` (artifact ID
 `10965600831`, digest
 `sha256:8128d6920946cde8a09fcec4ea7f2fd15d4499dc3bf6450bae2b463fd621da63`).
-That temporary Actions artifact expires at `2026-10-12T11:01:02Z`; promotion
-at or after that instant requires a new reviewed dry run.
-
-This record does not publish the candidate. No `v5.0.8` release or public asset
-URL exists in this repository yet. A separate controlled publish must promote
-the exact reviewed Actions artifact without rebuilding it, as a prerelease with
-GitHub `latest` behavior disabled. The v5.0.8 whitepaper, intake bundle,
-robustness package, and all other assets remain held.
-
-Promotion also requires the producer default branch to remain at the reviewed
-publisher commit above. If it moves first, the workflow requires a new reviewed
-dry run. This section must be updated promptly after publication so its status
-does not remain stale.
+Publication workflow run
+[`36478585711`](https://github.com/equilens-labs/fl-bsa/actions/runs/36478585711)
+promoted that exact artifact without rebuilding it. The v5.0.8 whitepaper,
+intake bundle, robustness package, and all other assets remain held.
 
 The public website therefore continues to use the approved RC9 assets below
-until the v5.0.8 release exists, its bytes and hashes have been verified, and
-the approved `customer_report.pdf` and `gold_bundle.zip` links are retargeted.
+until the approved `customer_report.pdf` and `gold_bundle.zip` links are
+retargeted by the website owner.
 The RC9 whitepaper, intake, manifest, checksum, and release-page links remain
 unchanged under this decision.
 
