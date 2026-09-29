@@ -62,12 +62,24 @@ Not every release will necessarily include every asset, but names are intended t
 ## v5.0.8 Published Demo Prerelease
 
 The release owner approved publication of a bounded `v5.0.8` synthetic/demo
-prerelease containing exactly these four assets:
+prerelease containing exactly four assets. The links this README currently
+promotes are:
 
 - [`customer_report.pdf`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/customer_report.pdf)
-- [`gold_bundle.zip`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/gold_bundle.zip)
 - [`manifest.json`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/manifest.json)
 - [`SHA256SUMS.txt`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/SHA256SUMS.txt)
+
+### Gold bundle withdrawn from active promotion (2026-09-29)
+
+`gold_bundle.zip` remains in the immutable release for audit history, but it is
+withdrawn from active promotion and website linking. Its `gold/summary.json`
+`01_balanced` row labels an absolute selection-rate gap as Average Odds
+Difference even though the canonical metrics record AOD as unavailable. The
+summary also omits controlling warning comparisons, including `04_security`
+(`0.8941`) and `06_xlsx_parity` (`0.8762`). Do not use or promote that bundle
+for technical evaluation. The exact-tag asset remains publicly downloadable
+for audit history. A corrected bundle will use a superseding release; the
+existing `v5.0.8` asset bytes, manifest, and recorded hashes will not change.
 
 The [public release](https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8)
 was published by the dedicated public-release App on 2026-09-28 as an immutable
@@ -87,21 +99,22 @@ Publication workflow run
 promoted that exact artifact without rebuilding it. The v5.0.8 whitepaper,
 intake bundle, robustness package, and all other assets remain held.
 
-The public website therefore continues to use the approved RC9 assets below
-until the approved `customer_report.pdf` and `gold_bundle.zip` links are
-retargeted by the website owner.
+Website mitigation
+[`equilens-labs/website#94`](https://github.com/equilens-labs/website/pull/94)
+removes the Gold link while retaining the approved `v5.0.8`
+`customer_report.pdf`. Until that deployment reaches the live site, the old
+Gold link may remain visible and must not be treated as a current recommendation.
 The RC9 whitepaper, intake, manifest, checksum, and release-page links remain
 unchanged under this decision.
 
-## Website-Surfaced Assets
+## Website-Surfaced Assets After Mitigation
 
-The public website currently links directly to these
-`v5.0.0-rc9-public-fix-2724455` prerelease assets:
+After website PR 94 deploys, the public website links directly to the `v5.0.8`
+`customer_report.pdf` and these `v5.0.0-rc9-public-fix-2724455` prerelease
+assets:
 
 - `whitepaper.pdf`
 - `WhitePaper_Intake_Bundle_v4.zip`
-- `customer_report.pdf`
-- `gold_bundle.zip`
 - `manifest.json`
 - `SHA256SUMS.txt`
 
