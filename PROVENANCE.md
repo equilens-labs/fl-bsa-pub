@@ -107,6 +107,26 @@ decision, the website owner may retarget only direct `customer_report.pdf` and
 `gold_bundle.zip` links; the current RC9 whitepaper, intake, integrity, and
 release-page links remain unchanged.
 
+### 2026-09-29 active-promotion correction
+
+The immutable release and the hashes above remain the historical record. On
+2026-09-29, `gold_bundle.zip` was withdrawn from active promotion and
+technical-evaluation use because its regenerated `gold/summary.json` labels an
+absolute selection-rate gap of `0.0049` as Average Odds Difference in the
+`01_balanced` row while the canonical
+scenario metrics and report record AOD as unavailable. The summary also omits
+controlling warning comparisons, including `04_security` (`0.8941`) and
+`06_xlsx_parity` (`0.8762`). This correction supersedes the preceding permission
+to retarget a `gold_bundle.zip` website link; only the `customer_report.pdf`
+permission remains. The website withdrawal is tracked separately and removes
+the Gold link when deployed. The repository README no longer promotes the
+bundle. The exact-tag Gold asset remains publicly downloadable for audit
+history and must not be used as a current technical-evaluation artifact.
+`customer_report.pdf` remains the active v5.0.8 sample while a corrected report
+hierarchy and Gold bundle are prepared for a new, superseding release. The
+v5.0.8 release asset bytes, manifest, and recorded hashes must not be replaced
+or edited.
+
 ## v5.0.0-rc9-public-fix-2724455
 
 - Public artifact release:
