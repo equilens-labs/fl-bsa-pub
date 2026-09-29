@@ -225,10 +225,10 @@ scenario metrics and report record AOD as unavailable. The summary also omits
 controlling warning comparisons, including `04_security` (`0.8941`) and
 `06_xlsx_parity` (`0.8762`). This correction supersedes the preceding permission
 to retarget a `gold_bundle.zip` website link; only the `customer_report.pdf`
-permission remains. The website withdrawal is tracked separately and removes
-the Gold link when deployed. The repository README no longer promotes the
-bundle. The exact-tag Gold asset remains publicly downloadable for audit
-history and must not be used as a current technical-evaluation artifact.
+permission remains. Website PR `equilens-labs/website#94` removed the Gold
+link, and this repository's README no longer promotes the bundle.
+The exact-tag Gold asset remains publicly downloadable for audit history and
+must not be used as a current technical-evaluation artifact.
 The older `customer_report.pdf` remains part of the immutable historical
 release, but active report promotion is superseded by the report-only
 `v5.0.8-report-fix-20260929` release above. No corrected Gold bundle was
