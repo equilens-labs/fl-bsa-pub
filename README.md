@@ -98,7 +98,7 @@ intake, robustness, and product artifacts remain held. The older immutable
 `v5.0.8` release remains available as historical evidence; its Gold bundle
 remains withdrawn from promotion.
 
-## v5.0.8 Published Demo Prerelease
+## Historical v5.0.8 Published Demo Prerelease
 
 The release owner approved publication of a bounded `v5.0.8` synthetic/demo
 prerelease containing exactly four assets. Its historical report and integrity
@@ -169,8 +169,9 @@ directly from the public website; they remain available on the release tag page:
 
 ## Exact Stable v5 Disposition
 
-The public assets above are an RC9-era corrected, non-commercial technical-proof prerelease. They
-are not a public distribution of the product repository's exact stable `v5.0.0` release.
+The RC9 assets listed immediately above are an RC9-era corrected, non-commercial technical-proof
+prerelease. They are not a public distribution of the product repository's exact stable `v5.0.0`
+release.
 
 No exact-stable `v5.0.0` public release is recorded in this repository. Do not infer stable public
 availability, customer-evidence approval, general availability, certification, or Marketplace
