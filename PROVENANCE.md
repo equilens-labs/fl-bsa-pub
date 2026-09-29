@@ -8,6 +8,113 @@ For each release, treat the release asset `manifest.json` as the artifact-level
 source of truth. It records the available upstream evidence/product commit
 SHAs, workflow runs, publisher run, and available per-asset SHA256 digests.
 
+## v5.0.8-report-fix-20260929
+
+Public release:
+
+- Release:
+  <https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8-report-fix-20260929>
+- Release ID: `399150186`
+- Published: `2026-09-29T12:58:45Z`
+- Public repository tag target:
+  `2b90d243efdeccb9a7b7cbc596925a18b5262da6`
+- GitHub prerelease: `true`
+- GitHub latest: `false`
+- Immutable release: `true`
+- Publication workflow:
+  [`36571419803`](https://github.com/equilens-labs/fl-bsa/actions/runs/36571419803),
+  attempt `1`
+- Publisher App: `equilens-fl-bsa-public-release`
+
+The release owner approved the exact report-only correction in
+[`fl-bsa#1807`](https://github.com/equilens-labs/fl-bsa/issues/1807). Dry-run
+publisher workflow
+[`36569583192`](https://github.com/equilens-labs/fl-bsa/actions/runs/36569583192),
+attempt `1`, produced the reviewed source artifact at publisher commit
+`16bab857711eadabad3b31f4a026828d9c65cc66`.
+
+Reviewed source artifact:
+
+- Actions artifact name: `public-artifacts-v5.0.8-report-fix-20260929`
+- Actions artifact ID: `11033118225`
+- Actions artifact size: `190863` bytes
+- Actions artifact digest:
+  `sha256:b00fef1e2d3576e9a8301978159d2b7558b60e7dc70d9d4e4646138d08d02f45`
+- Actions artifact expiry: `2026-10-13T12:43:15Z`
+- Scanner rewrites: `0`
+- Suppressed OCR warnings: `0`
+
+Source binding:
+
+- Comprehensive workflow:
+  [`36563573635`](https://github.com/equilens-labs/fl-bsa/actions/runs/36563573635),
+  attempt `1`
+- Product/source commit:
+  `683507a31a434d89d266316c6e25633de589a22e`
+- Source report path:
+  `gold/20260929T120145Z/01_balanced/report.pdf`
+- Gold artifact: `gold-full-artifacts`
+- Gold artifact ID: `11032570851`
+- Gold artifact size: `27584329` bytes
+- Gold artifact digest:
+  `sha256:69d44f601a8f5f79170227487b81c6194a6a9493c96f66ae0bcc501e5db87967`
+- Gold artifact expiry: `2026-10-06T12:16:01Z`
+- Runtime-profile artifact: `ci-runtime-profile-contract`
+- Runtime-profile artifact ID: `11032535950`
+- Runtime-profile artifact size: `520` bytes
+- Runtime-profile artifact digest:
+  `sha256:5c9388d33f3a0d105daa75ee0618082956a5bab454ce8970c44e69180e675a7b`
+- Runtime image identity:
+  `683507a31a434d89d266316c6e25633de589a22e-commercial_no_datacebo`
+
+The immutable public release contains exactly three assets:
+
+| Asset | Size (bytes) | SHA-256 |
+|---|---:|---|
+| `customer_report.pdf` | 239223 | `8209216fa746ff8985dd3ad70d46b8bc0eeed7ad39393fffc6dfdefe64d0cf76` |
+| `manifest.json` | 4153 | `d9e8ed15b627caedfba5c78ee8e3af45ee15a0afa4a674647f41b474927b5e2e` |
+| `SHA256SUMS.txt` | 86 | `e59386801fa5a6ed36ef1ec40f977151ea8d1c6b0d6e795dfb5797d41228ec5d` |
+
+`SHA256SUMS.txt` covers the report payload. The reviewed Actions artifact
+digest binds the complete three-file source. Publication workflow run
+`36571419803` promoted this exact tuple without rebuilding it, with these
+reviewed coordinates:
+
+- Run ID: `36569583192`
+- Run attempt: `1`
+- Artifact ID: `11033118225`
+- Artifact digest:
+  `sha256:b00fef1e2d3576e9a8301978159d2b7558b60e7dc70d9d4e4646138d08d02f45`
+
+After publication, the release page and all three unauthenticated exact-tag
+asset URLs returned HTTP 200. Fresh downloads matched the table, GitHub's
+release-asset digests, and the reviewed dry-run bytes. The temporary Actions
+and source artifacts may expire; that expiry does not affect the immutable
+public release.
+
+Public disposition:
+
+- Exact public tag `v5.0.8-report-fix-20260929`, GitHub prerelease `true`,
+  GitHub latest `false`
+- Artifact profile `report_demo_v1`; classification `synthetic_demo_only`
+- Customer-evidence posture `characterization_only`; no claim expansion
+- Payload limited to `customer_report.pdf`, with manifest and checksum
+  sidecars
+- Canonical Average Odds Difference is unavailable with reason
+  `requires_ground_truth_and_predictions`; no numeric AOD is claimed
+- The controlling Race / Asian versus Black / `0.950` / `0.800` / Within
+  Threshold comparison is presented together
+- `gold_bundle.zip`, `whitepaper.pdf`, `WhitePaper_Intake_Bundle_v4.zip`,
+  robustness materials, product artifacts, and every other asset remain held
+- No certification or compliance approval, customer or live-data result,
+  general-availability or Marketplace claim, production outcome, or regulatory
+  or legal determination is authorized by this release
+
+The report carries the `DEMO / EVALUATION ONLY` watermark. The publisher was
+disabled again after success, `PUBLIC_ARTIFACTS_ENABLED=false`, and repository
+immutable-release creation was turned off. The published release remains
+immutable.
+
 ## v5.0.8
 
 Public release:
@@ -118,14 +225,15 @@ scenario metrics and report record AOD as unavailable. The summary also omits
 controlling warning comparisons, including `04_security` (`0.8941`) and
 `06_xlsx_parity` (`0.8762`). This correction supersedes the preceding permission
 to retarget a `gold_bundle.zip` website link; only the `customer_report.pdf`
-permission remains. The website withdrawal is tracked separately and removes
-the Gold link when deployed. The repository README no longer promotes the
-bundle. The exact-tag Gold asset remains publicly downloadable for audit
-history and must not be used as a current technical-evaluation artifact.
-`customer_report.pdf` remains the active v5.0.8 sample while a corrected report
-hierarchy and Gold bundle are prepared for a new, superseding release. The
-v5.0.8 release asset bytes, manifest, and recorded hashes must not be replaced
-or edited.
+permission remains. Website PR `equilens-labs/website#94` removed the Gold
+link, and this repository's README no longer promotes the bundle.
+The exact-tag Gold asset remains publicly downloadable for audit history and
+must not be used as a current technical-evaluation artifact.
+The older `customer_report.pdf` remains part of the immutable historical
+release, but active report promotion is superseded by the report-only
+`v5.0.8-report-fix-20260929` release above. No corrected Gold bundle was
+published. The v5.0.8 release asset bytes, manifest, and recorded hashes must
+not be replaced or edited.
 
 ## v5.0.0-rc9-public-fix-2724455
 

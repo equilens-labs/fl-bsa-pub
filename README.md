@@ -59,11 +59,50 @@ Not every release will necessarily include every asset, but names are intended t
 - `manifest.json`
 - `SHA256SUMS.txt`
 
-## v5.0.8 Published Demo Prerelease
+## v5.0.8 Corrected Report Demo Prerelease
+
+The release owner approved a report-only correction for the active campaign in
+[`fl-bsa#1807`](https://github.com/equilens-labs/fl-bsa/issues/1807). The
+immutable
+[`v5.0.8-report-fix-20260929`](https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8-report-fix-20260929)
+prerelease contains exactly these three assets:
+
+- [`customer_report.pdf`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8-report-fix-20260929/customer_report.pdf)
+- [`manifest.json`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8-report-fix-20260929/manifest.json)
+- [`SHA256SUMS.txt`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8-report-fix-20260929/SHA256SUMS.txt)
+
+The release was published on 2026-09-29 as a GitHub prerelease with `latest`
+behavior disabled. The 17-page, 239,223-byte report has SHA-256
+`8209216fa746ff8985dd3ad70d46b8bc0eeed7ad39393fffc6dfdefe64d0cf76`
+and carries the `DEMO / EVALUATION ONLY` watermark. Its canonical Average Odds
+Difference result is unavailable because that metric requires separate
+ground-truth and prediction provenance. The executive summary keeps the
+decision-controlling Race comparison, Asian and Black groups, ratio `0.950`,
+threshold `0.800`, and `Within Threshold` status together.
+
+Dry-run workflow
+[`36569583192`](https://github.com/equilens-labs/fl-bsa/actions/runs/36569583192)
+produced the reviewed three-file tuple. Publication workflow
+[`36571419803`](https://github.com/equilens-labs/fl-bsa/actions/runs/36571419803)
+promoted those exact bytes without rebuilding them. All three unauthenticated
+asset URLs and the release page returned HTTP 200 after publication; the
+downloaded bytes matched the reviewed artifact and GitHub release-asset
+digests.
+
+This release has artifact profile `report_demo_v1`, classification
+`synthetic_demo_only`, and customer-evidence posture `characterization_only`.
+It does not authorize claim expansion, customer or live-data results,
+production use, certification or compliance approval, GA or Marketplace
+availability, or a legal or regulatory determination. Gold, whitepaper,
+intake, robustness, and product artifacts remain held. The older immutable
+`v5.0.8` release remains available as historical evidence; its Gold bundle
+remains withdrawn from promotion.
+
+## Historical v5.0.8 Published Demo Prerelease
 
 The release owner approved publication of a bounded `v5.0.8` synthetic/demo
-prerelease containing exactly four assets. The links this README currently
-promotes are:
+prerelease containing exactly four assets. Its historical report and integrity
+assets are:
 
 - [`customer_report.pdf`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/customer_report.pdf)
 - [`manifest.json`](https://github.com/equilens-labs/fl-bsa-pub/releases/download/v5.0.8/manifest.json)
@@ -101,17 +140,16 @@ intake bundle, robustness package, and all other assets remain held.
 
 Website mitigation
 [`equilens-labs/website#94`](https://github.com/equilens-labs/website/pull/94)
-removes the Gold link while retaining the approved `v5.0.8`
-`customer_report.pdf`. Until that deployment reaches the live site, the old
-Gold link may remain visible and must not be treated as a current recommendation.
-The RC9 whitepaper, intake, manifest, checksum, and release-page links remain
-unchanged under this decision.
+removed the Gold link while temporarily retaining the `v5.0.8`
+`customer_report.pdf`. The corrected-report retarget below supersedes that
+temporary report target. The RC9 whitepaper, intake, manifest, checksum, and
+release-page links remain unchanged under this decision.
 
-## Website-Surfaced Assets After Mitigation
+## Website Link Target After Corrected-Report Retarget
 
-After website PR 94 deploys, the public website links directly to the `v5.0.8`
-`customer_report.pdf` and these `v5.0.0-rc9-public-fix-2724455` prerelease
-assets:
+The approved website retarget changes only the seven direct report links to the
+`v5.0.8-report-fix-20260929` `customer_report.pdf`. These
+`v5.0.0-rc9-public-fix-2724455` prerelease assets remain unchanged:
 
 - `whitepaper.pdf`
 - `WhitePaper_Intake_Bundle_v4.zip`
@@ -131,8 +169,9 @@ directly from the public website; they remain available on the release tag page:
 
 ## Exact Stable v5 Disposition
 
-The public assets above are an RC9-era corrected, non-commercial technical-proof prerelease. They
-are not a public distribution of the product repository's exact stable `v5.0.0` release.
+The RC9 assets listed immediately above are an RC9-era corrected, non-commercial technical-proof
+prerelease. They are not a public distribution of the product repository's exact stable `v5.0.0`
+release.
 
 No exact-stable `v5.0.0` public release is recorded in this repository. Do not infer stable public
 availability, customer-evidence approval, general availability, certification, or Marketplace
