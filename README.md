@@ -16,7 +16,8 @@ This repository hosts **public, versioned, website-linkable** release artifacts 
 - Customer datasets or customer evidence bundles.
 - Logs, runner filesystem paths, credentials/secrets, or internal-only infrastructure details.
 - Artifacts committed into git history (all publishables are **release assets**, not tracked files).
-- Demo appliance images/builds (those are distributed separately, e.g. via cloud marketplaces or direct delivery).
+- Demo appliance images/builds. If an appliance route is separately approved, its exact handoff or
+  Marketplace record governs distribution; this repository does not establish a standing route.
 
 ## License Scope
 
