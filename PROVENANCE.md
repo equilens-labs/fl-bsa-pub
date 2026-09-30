@@ -8,6 +8,127 @@ For each release, treat the release asset `manifest.json` as the artifact-level
 source of truth. It records the available upstream evidence/product commit
 SHAs, workflow runs, publisher run, and available per-asset SHA256 digests.
 
+Technical-whitepaper releases use `whitepaper_release.json` as their
+artifact-level provenance sidecar instead of `manifest.json`.
+
+## v5.0.8-technical-whitepaper-20260930
+
+The source issue and workflow links in this section are operator-only
+provenance because their repositories are private. The public release assets,
+sidecar, companion, checksums, and copied identities provide the public
+verification record.
+
+Public release:
+
+- Release:
+  <https://github.com/equilens-labs/fl-bsa-pub/releases/tag/v5.0.8-technical-whitepaper-20260930>
+- Release ID: `400385791`
+- Published: `2026-09-30T19:49:10Z`
+- Public repository tag target:
+  `39ce98b3abf8c81c72e944751b91fbaebbabdefa`
+- GitHub prerelease: `true`
+- GitHub latest: `false`
+- Immutable release: `true`
+- Publication workflow:
+  [`36767857541`](https://github.com/equilens-labs/fl-bsa/actions/runs/36767857541),
+  attempt `1`
+- Publisher App: `equilens-fl-bsa-public-release`
+
+The release owner approved the exact four-file public technical publication in
+[`fl-bsa#1812`](https://github.com/equilens-labs/fl-bsa/issues/1812). The final
+exact-byte decision supersedes the earlier source tuple after dry-run workflow
+`36761261905` correctly detected that the first companion ZIP would have been
+rewritten by the public scanner. The source build was corrected to emit the
+scanner's canonical ZIP form and rebuilt before publication.
+
+Product and paper source binding:
+
+- Product release tag: `v5.0.8`
+- Product commit: `97356e5f65e0032e8363190c47104c96294f8f2a`
+- Annotated product tag object:
+  `81a60b5df9057f8e3f9d7648f2f8e620510d314f`
+- Whitepaper repository commit:
+  `09fe311217a5c161727aadefdb4d697d146c9e97`
+- Official whitepaper build:
+  [`36763209122`](https://github.com/equilens-labs/fl-bsa-whitepaper/actions/runs/36763209122),
+  attempt `1`
+- Official Actions artifact name:
+  `public-technical-whitepaper-v5.0.8-1`
+- Official Actions artifact ID: `11119103396`
+- Official Actions artifact size: `660289` bytes
+- Official Actions artifact digest:
+  `sha256:b1dddc01d4787bf23953822d1e84b817d5865136f2898fcd551c1958fdb7b964`
+- Official Actions artifact expiry: `2026-12-29T19:05:25Z`
+
+The checked-in product authorization map binds that source identity, the exact
+four files below, the owner decision, and the restrictive claims posture. The
+immutable source sidecar records the source-build state
+`exact_byte_review_pending` and `source_public_distribution_authorized=false`;
+the later owner exact-byte decision and product authorization map provide the
+separate publication authority without rewriting source provenance.
+
+Reviewed dry-run artifact:
+
+- Publisher commit:
+  `2241cff8a32102d6caad3c155cf9dafcbe7df185`
+- Dry-run publisher workflow:
+  [`36766710848`](https://github.com/equilens-labs/fl-bsa/actions/runs/36766710848),
+  attempt `1`
+- Actions artifact name:
+  `public-artifacts-v5.0.8-technical-whitepaper-20260930`
+- Actions artifact ID: `11121796081`
+- Actions artifact size: `660289` bytes
+- Actions artifact digest:
+  `sha256:ae0feabc5de4514884190dc0c8d11dd9195276fed4ad8a9ceae3a4521de4fe28`
+- Actions artifact expiry: `2026-10-14T19:38:01Z`
+- Scanner inventory SHA-256:
+  `1b9c24b0ec6a35ded743c2a875c356aaab67402b7e832a1dc95aaa6b77f51067`
+- Scanner rewrites: `0`
+
+The source and dry-run Actions wrapper digests differ because GitHub repacked
+the same extracted files. Independent downloads confirmed that all four files
+inside the two wrappers are byte-identical. Publication workflow
+`36767857541` downloaded the reviewed artifact by exact run, attempt, artifact
+ID, digest, publisher SHA, workflow path, event, and successful conclusion. It
+repeated payload, checksum, scanner, and inventory verification before
+publication and did not rebuild the paper or companion.
+
+The immutable public release contains exactly four assets:
+
+| Asset | Size (bytes) | SHA-256 |
+|---|---:|---|
+| `whitepaper.pdf` | 956402 | `374fe04edf52359976170f4115762b6b11d90fdc21cb340f3de73749eaebb736` |
+| `fl-bsa-v5.0.8-technical-companion.zip` | 103130 | `b110cfa4ccf61a029b71cb0d8b4e963c9effae8761c6b16670ca7f1ac25abb2d` |
+| `whitepaper_release.json` | 3147 | `8396eceb05e7211264d76928853504c04b3268f2bae180f5245e8f44324fc980` |
+| `SHA256SUMS.txt` | 275 | `ab9ae86965626373839fe144072ae0702eb6969eb38d2d7ed493682e50656bb5` |
+
+`SHA256SUMS.txt` covers the PDF, companion, and release sidecar. The reviewed
+dry-run artifact digest binds the complete four-file tuple. The public release
+page and all four unauthenticated exact-tag asset URLs returned HTTP 200 after
+publication. Fresh downloads matched the table, GitHub's release-asset
+digests, `SHA256SUMS.txt`, and the reviewed bytes.
+
+Public disposition:
+
+- Exact public tag `v5.0.8-technical-whitepaper-20260930`, GitHub prerelease
+  `true`, GitHub latest `false`
+- Artifact profile `technical_whitepaper_v1`
+- Customer-evidence posture `characterization_only`; customer- and
+  promotion-evidence eligibility are false
+- Payload limited to the 21-page technical paper, its seven-member offline
+  verification companion, release sidecar, and checksums
+- Average Odds Difference and Equal Opportunity Difference remain unavailable;
+  no numeric zero is claimed for either metric
+- All 40 robustness contracts pass; mean utility AUC is `0.689630`, with 36 of
+  40 runs below `0.70`, so production utility is not established
+- No certification or compliance approval, customer or live-data result,
+  general-availability or Marketplace claim, production outcome, regulator
+  approval, claim expansion, or legal determination is authorized
+
+After publication, `PUBLIC_ARTIFACTS_ENABLED` was reset to `false`, publisher
+workflow `221737137` was disabled again, and immutable-release creation was
+turned off. The published release remains immutable.
+
 ## v5.0.8-report-fix-20260929
 
 Public release:
@@ -104,8 +225,11 @@ Public disposition:
   `requires_ground_truth_and_predictions`; no numeric AOD is claimed
 - The controlling Race / Asian versus Black / `0.950` / `0.800` / Within
   Threshold comparison is presented together
-- `gold_bundle.zip`, `whitepaper.pdf`, `WhitePaper_Intake_Bundle_v4.zip`,
-  robustness materials, product artifacts, and every other asset remain held
+- `gold_bundle.zip`, a standalone top-level intake ZIP, the full/private
+  robustness package, product artifacts, and every other asset remain held
+  under this report-only decision; the paper is published separately under
+  `v5.0.8-technical-whitepaper-20260930`, whose companion contains the exact
+  producer intake ZIP and a bounded public robustness projection
 - No certification or compliance approval, customer or live-data result,
   general-availability or Marketplace claim, production outcome, or regulatory
   or legal determination is authorized by this release
@@ -201,7 +325,11 @@ Public disposition:
 - Payloads limited to `customer_report.pdf` and `gold_bundle.zip`, with the
   manifest and checksum sidecars
 - `whitepaper.pdf`, `WhitePaper_Intake_Bundle_v4.zip`, robustness materials,
-  and every other asset remain held
+  and every other asset were held under this release decision; the paper is
+  now published separately under `v5.0.8-technical-whitepaper-20260930`, whose
+  companion contains the exact producer intake ZIP and bounded public
+  robustness evidence; no standalone top-level intake ZIP or full/private
+  robustness package was published
 - No certification or compliance approval, customer or live-data result,
   general-availability or Marketplace claim, production outcome, or regulatory
   or legal determination is authorized by this release
@@ -209,10 +337,10 @@ Public disposition:
 The report carries the `DEMO / EVALUATION ONLY` watermark. The release
 manifest records `vendor_authorship_claimed=false`; the Gold bundle's keys
 support bundle-consistency checks and are not a vendor-authorship trust anchor.
-Publication does not change the website automatically. Under the recorded
-decision, the website owner may retarget only direct `customer_report.pdf` and
-`gold_bundle.zip` links; the current RC9 whitepaper, intake, integrity, and
-release-page links remain unchanged.
+Publication does not change the website automatically. Under this historical
+decision, the website owner could retarget only direct `customer_report.pdf`
+and `gold_bundle.zip` links; the later report correction and technical-paper
+release supersede those website targets.
 
 ### 2026-09-29 active-promotion correction
 
